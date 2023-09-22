@@ -1,35 +1,133 @@
-// Create arrays of thumbnail URLs, titles, and subtexts
-const thumbnails = [
-    '/images/thumbnailcopy2.png',
-    '/images/thumbnailcopy.png',
-    '/images/thumbnail.png',
-    // Add more thumbnail URLs here
-];
 
-const titles = [
-    'Chill Station 1',
-    'Chill Station 2',
-    'Chill Station 3',
-    // Add more titles here
-];
+document.addEventListener("DOMContentLoaded", function () {
+    // Array of image and text combinations
+    var genreArray = [
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
 
-// Get all card elements with the same ID "card-thumbnail"
-const thumbnailElements = document.querySelectorAll('#card-thumbnail');
+        // Add more combinations here
+    ];
 
-// Loop through each card element and assign random data
-thumbnailElements.forEach((thumbnailElement) => {
-    // Generate a random index
-    const randomIndex = Math.floor(Math.random() * thumbnails.length);
+    // Shuffle the genreArray to randomize the combinations
+    shuffleArray(genreArray);
 
-    // Find the parent card element
-    const cardElement = thumbnailElement.closest('.card-bg');
+    // Get all elements with the class "genre-img" and "genre-text"
+    var imgElements = document.querySelectorAll("#genre-img");
+    var textElements = document.querySelectorAll("#genre-text");
 
-    // Find the child elements within the card element by their IDs
-    const titleElement = cardElement.querySelector('#card-title');
-    const subtextElement = cardElement.querySelector('#card-subtext');
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
 
-    // Update the content of the child elements with the corresponding data
-    thumbnailElement.src = thumbnails[randomIndex];
-    titleElement.textContent = titles[randomIndex];
-    subtextElement.textContent = subtexts[randomIndex];
+    // Loop through each card and assign the shuffled combinations
+    for (var i = 0; i < imgElements.length; i++) {
+        imgElements[i].src = "/images/" + genreArray[i].image;
+        textElements[i].textContent = genreArray[i].text;
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Code for randomizing text and image combinations
+    var genreArray = [
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Indie", image: "image3.png" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Music", image: "image2.jpeg" },
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Podcasts", image: "image1.jpeg" },
+        { text: "Ambient", image: "image4.jpeg" },
+    ];
+
+    // Array of colors
+    var colorArray = [
+        "#8a2be2",
+        "#8a2be2",
+        "#6391b9",
+        "#6391b9",
+        "#977e49",
+        "#358a6e",
+        "#9c92b3",
+        "#b39292",
+        "#7b726f",
+        "#494949",
+        "#731860",
+        "#977e49",
+        "#358a6e",
+        "#9c92b3",
+        "#b39292",
+        "#7b726f",
+        "#494949",
+        "#731860",
+        "#00007c",
+        "#0f4741",
+        "#805007",
+        "#805007",
+        // Add more color values here
+    ];
+
+    // Shuffle the genreArray, textArray, and colorArray to randomize the combinations
+    shuffleArray(genreArray);
+    shuffleArray(colorArray);
+
+    // Get all elements with the class "genre-img", "genre-text", and "genre-cards"
+    var imgElements = document.querySelectorAll("#genre-img");
+    var textElements = document.querySelectorAll("#genre-text");
+    var cardElements = document.querySelectorAll(".genre-cards");
+
+    // Function to shuffle an array randomly
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Loop through each card and assign the shuffled combinations
+    for (var i = 0; i < imgElements.length; i++) {
+        imgElements[i].src = "/images/" + genreArray[i].image;
+        textElements[i].textContent = genreArray[i].text;
+        cardElements[i].style.backgroundColor = colorArray[i];
+    }
+
+    // Code for any other functionality can go here
 });
