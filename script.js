@@ -1,54 +1,54 @@
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Array of image and text combinations
-    var genreArray = [
-        { text: "Podcasts", image: "image1.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Ambient", image: "image4.jpeg" },
-        { text: "Ambient", image: "image4.jpeg" },
-        { text: "Ambient", image: "image4.jpeg" },
-        { text: "Ambient", image: "image4.jpeg" },
-        { text: "Ambient", image: "image4.jpeg" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Indie", image: "image3.png" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Music", image: "image2.jpeg" },
-        { text: "Podcasts", image: "image1.jpeg" },
-        { text: "Podcasts", image: "image1.jpeg" },
-        { text: "Ambient", image: "image4.jpeg" },
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Array of image and text combinations
+//     var genreArray = [
+//         { text: "Podcasts", image: "image1.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Ambient", image: "image4.jpeg" },
+//         { text: "Ambient", image: "image4.jpeg" },
+//         { text: "Ambient", image: "image4.jpeg" },
+//         { text: "Ambient", image: "image4.jpeg" },
+//         { text: "Ambient", image: "image4.jpeg" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Indie", image: "image3.png" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Music", image: "image2.jpeg" },
+//         { text: "Podcasts", image: "image1.jpeg" },
+//         { text: "Podcasts", image: "image1.jpeg" },
+//         { text: "Ambient", image: "image4.jpeg" },
 
-        // Add more combinations here
-    ];
+//         // Add more combinations here
+//     ];
 
-    // Shuffle the genreArray to randomize the combinations
-    shuffleArray(genreArray);
+//     // Shuffle the genreArray to randomize the combinations
+//     shuffleArray(genreArray);
 
-    // Get all elements with the class "genre-img" and "genre-text"
-    var imgElements = document.querySelectorAll("#genre-img");
-    var textElements = document.querySelectorAll("#genre-text");
+//     // Get all elements with the class "genre-img" and "genre-text"
+//     var imgElements = document.querySelectorAll("#genre-img");
+//     var textElements = document.querySelectorAll("#genre-text");
 
-    // Function to shuffle an array randomly
-    function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
+//     // Function to shuffle an array randomly
+//     function shuffleArray(array) {
+//         for (var i = array.length - 1; i > 0; i--) {
+//             var j = Math.floor(Math.random() * (i + 1));
+//             [array[i], array[j]] = [array[j], array[i]];
+//         }
+//     }
 
-    // Loop through each card and assign the shuffled combinations
-    for (var i = 0; i < imgElements.length; i++) {
-        imgElements[i].src = "/images/" + genreArray[i].image;
-        textElements[i].textContent = genreArray[i].text;
-    }
-});
+//     // Loop through each card and assign the shuffled combinations
+//     for (var i = 0; i < imgElements.length; i++) {
+//         imgElements[i].src = "/images/" + genreArray[i].image;
+//         textElements[i].textContent = genreArray[i].text;
+//     }
+// });
 
 
 document.addEventListener("DOMContentLoaded", function () {
