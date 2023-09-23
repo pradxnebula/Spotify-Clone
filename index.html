@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="script" href="script.js">
 </head>
 
 <body>
@@ -15,12 +14,12 @@
             <div class="initial-tab" style="position: fixed;">
                 <div class="initial-tab-upper">
                     <div>
-                        <div><img id="nav-icon" src="/icons/1.png" alt="" style="margin-top: 19px;"></div>
+                        <div><img id="nav-icon" src="/icons/1.png"  alt="" style="margin-top: 19px;"></div>
                         <div><img id="nav-icon" src="/icons/2.png" alt=""></div>
                     </div>
                     <div>
-                        <p style="margin-top: 22px;">Home</p>
-                        <p style="margin-top: 27px;">Search</p>
+                        <p class="home" style="margin-top: 22px; cursor: pointer;" onclick="showContent('content-1')">Home</p>
+                        <p class="search" style="margin-top: 27px; cursor: pointer;" onclick="showContent('content-2')">Search</p>
                     </div>
                 </div>
                 <div class="initial-tab-lower">
@@ -232,7 +231,7 @@
             </div>
         </div>
         <div class="main-window-fixed" style="position: fixed;">
-            <div class="main-window" style="overflow: scroll;">
+            <div class="main-window" id="content-1" style="overflow: scroll;" >
                 <h1 id="category-title">More of what you like</h1>
                 <div class="flex" id="card-grid" style="overflow: scroll;">
                     <div class="card-bg">
@@ -654,9 +653,132 @@
                     </div>
                 </div>
             </div>
+
+            <!-- search-tab -->
+            <div class="main-window" id="content-2" style="overflow: scroll;">
+                <h1 id="category-title">Browse All</h1>
+                <div class="genre-grid">
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                <div class="genre-cards">
+                    <div id="genre-text"></div>
+                    <div><img id="genre-img" src="" alt="" style="width: 6rem;"></div>
+                </div>
+                </div>
+
+
+            </div>
+            <!-- search-tab -->
+
+
+
+
         </div>
     </div>
+    <div style="    background: black;
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    width: -webkit-fill-available;
+    bottom: 0px;
+    margin-left: -6px;">
+        <div style="display: flex;">
+            <div><img src="/images/thumbnail.png" alt="" style="    width: 3.5rem;
+                margin: 12px;
+                border-radius: 4px;"></div>
+            <div>Play</div>
+            <div><audio controls>
+                    <source src="/songs/6091- Few days on Earth (29YEARS).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+        </div>
     </div>
+
+    <script src="switch.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
