@@ -245,3 +245,12 @@ font-size: 1rem;
     margin-left: 14px;
     margin-top: 20px;
 }
+
+#hover-play {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card-bg:hover #hover-play {
+    opacity: 1;
+}
