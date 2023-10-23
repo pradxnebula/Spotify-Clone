@@ -196,6 +196,8 @@ p {
 
 #card-grid {
   margin-left: 22px;
+  transition: scroll-behavior 0.5s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 #card-grid::-webkit-scrollbar {
@@ -392,4 +394,3 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-

@@ -49,3 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
     lowerAdditional.classList.remove('additional2');
   });
 });
+
+
+
+
+document.getElementById("right-arrow").addEventListener("click", function () {
+  const container = document.querySelector("#card-grid");
+  container.scrollLeft = container.scrollWidth - container.clientWidth;
+});
+

@@ -734,3 +734,5 @@ document.addEventListener("DOMContentLoaded", function () {
         textElements[i].textContent = genreArray[i].text;
     }
 });
+
+
