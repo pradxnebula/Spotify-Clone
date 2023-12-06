@@ -394,3 +394,9 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+.home-pill {
+  display: flex;
+  column-gap: 0cap;
+}
