@@ -272,8 +272,6 @@ p {
   margin: -68px -9px 14.6px 6rem;
   display: block;
   opacity: 0;
-  transform: translateY(10px);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 #hover-play_1 {
@@ -281,14 +279,11 @@ p {
   margin: -75px -9px 14.6px 6rem;
   display: block;
   opacity: 0;
-  transform: translateY(10px);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .card-bg:hover #hover-play,
 .card-bg:hover #hover-play_1 {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .selected {
@@ -370,13 +365,12 @@ p {
   margin-right: 4px;
   display: block;
   opacity: 0;
-  transform: translateY(10px);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+ 
 }
 
 .home-pill:hover #hover-play_2 {
   opacity: 1;
-  transform: translateY(0);
+ 
 }
 
 .home-pill-grid {

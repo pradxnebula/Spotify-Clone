@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Code for randomizing text and image combinations
     var genreArray = [{
             text: "Podcasts",
             image: "image1.jpeg"
@@ -734,5 +733,3 @@ document.addEventListener("DOMContentLoaded", function () {
         textElements[i].textContent = genreArray[i].text;
     }
 });
-
-
